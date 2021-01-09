@@ -50,7 +50,8 @@ ul {
   padding: 15px;
 }
 li {
-  list-style: none;
+  list-style-type: decimal;
+  cursor: pointer;
   font-size: 22px;
   background-color: #fff;
   margin: 12px;
