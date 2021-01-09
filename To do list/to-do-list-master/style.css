@@ -1,121 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 * {
-  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  outline: 0;
 }
 body {
-  background-color: #ffffff;
+  background-image: url(body-bg.jpg);
 }
 
-h2 {
-  font-size: 15px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding-top: 35px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  width: 460px;
+  height: 680px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 }
-
-/* Style the list items */
-
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 12px 12px 12px;
-  width: 45%;
-  background: #ffcc00;
-  font-size: 18px;
-  transition: 0.2s;
-  margin: auto;
-  list-style-type: decimal;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #ffebcc;
-}
-
-/* background-color on hover */
-ul li:hover {
-  background: #ffd699;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
+h1 {
+  padding-top: 5px;
   color: #fff;
-  text-decoration: line-through;
+  font-size: 30px;
+  border-radius: 10px;
+  background-image: url(body-bg.jpg);
 }
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: "";
-  position: absolute;
-  border-color: #009999;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
+.add-elements {
+  margin: 12px;
 }
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: #ff9900;
-  padding: 30px 40px;
-  width: 50%;
-  color: white;
-  text-align: center;
-  margin: auto;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
 input {
-  margin-right: 5px;
+  padding: 6px 4px;
+  width: 70%;
+}
+button {
+  padding: 7px 14px;
+  background-color: #00b0ff;
   border: none;
-  border-radius: 10px;
-  width: 83%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
+  border-radius: 4px;
+  color: #fafafa;
+}
+.element-list {
+  height: 550px;
+  overflow-y: scroll;
+}
+ul {
+  padding: 15px;
+}
+li {
+  list-style: none;
+  font-size: 22px;
+  background-color: #fff;
+  margin: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  transition: 0.4s;
+}
+button:hover {
+  background-color: #1565c0;
 }
 
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 15%;
-  background: #222222;
-  color: #ffffff;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 10px;
+li:hover {
+  background-color: #e0e0e0;
 }
 
-.addBtn:hover {
-  background-color: #bbb;
+.checked {
+  text-decoration: line-through;
+  background-color: #e0e0e0;
 }
